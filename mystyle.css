@@ -38,19 +38,12 @@ body
 	font-size:20px;
 }
 
-#contact
-{
-	text-align: center;
-	clear:both;
-	overflow:hidden;
-	width:100%;
-	height:auto;
-}
+
 
 .thumbnail
 {
-	max-width:200px;
-	max-height:200px;
+	max-width:100px;
+	max-height:100px;
 }
 
 .container
@@ -65,6 +58,37 @@ body
 	background-color:black;
 	text-align:center;
 	width:100%;
-	padding:10%;
+	padding:50px;
 	margin-bottom:5%;
+}
+
+#link_contact
+{
+	text-align:center;
+}
+
+#section
+{
+	padding-top:40px;	
+	padding-bottom:40px;
+	font-size:23px;
+	font-weight:bold;
+}
+
+#copyright
+{
+	color:white;
+	font-size:12px;
+	padding:5%;
+}
+
+#foot
+{
+	padding-top:10%;
+	padding-bottom:5%;
+		text-align: center;
+	clear:both;
+	overflow:hidden;
+	width:100%;
+	height:auto;
 }
