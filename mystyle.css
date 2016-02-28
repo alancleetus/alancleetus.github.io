@@ -17,6 +17,7 @@ body
 .navbar
 {
 	margin:0;
+	margin-radius:0;
 }
 
 #myLogo
