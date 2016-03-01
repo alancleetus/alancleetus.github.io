@@ -21,6 +21,7 @@ body
 	margin-top: 0px;
 	z-index:-1;
 	position:fixed;
+	margin-bottom:100px;
 }
 
 #main
@@ -32,7 +33,7 @@ body
 	margin-left:0;
 	margin-right:0;
 	padding:0;
-	margin-bottom:250px;
+	margin-bottom:200px;
 
 }
 
