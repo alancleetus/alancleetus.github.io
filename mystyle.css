@@ -22,11 +22,11 @@ body
 	z-index:-1;
 	position:fixed;
 	margin-bottom:100px;
+	height:200px;
 }
 
 #main
 {
-	margin-top:150px;
 	width:100%;
 	background-color:white;
 	z-index:2;
