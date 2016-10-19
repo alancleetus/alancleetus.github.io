@@ -1,6 +1,18 @@
 body
 {
 	font-family: 'Lato', sans-serif;
+	 bgcolor:white;
+}
+.jumbotron
+{
+	background-image: url("table.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding:10%;
+	padding-bottom:10%;
+	margin-bottom: 0px;
+  	margin-top: 50px;
+	color: white;
 }
 
 #textOnPic
@@ -21,22 +33,18 @@ body
 	margin-top: 0px;
 	z-index:-1;
 	position:fixed;
-	margin-bottom:300px;
-	height:200px;
 }
 
 #main
 {
+	margin-top:150px;
 	width:100%;
 	background-color:white;
 	z-index:2;
 	margin-left:0;
 	margin-right:0;
 	padding:0;
-	margin-bottom:200px;
-
 }
-
 .navbar
 {
 	margin:0;
@@ -81,8 +89,7 @@ body
 	padding:50px;
 	margin-bottom:5%;
 	margin-top:0px;
-
-	background-image: url("repeat.png");
+	background-color:#1e1f26;
 }
 
 #link_contact
@@ -102,20 +109,32 @@ body
 {
 	color:white;
 	font-size:12px;
-	padding-top:5%;
+	padding:5%;
 }
 
 #foot
 {
-	position:fixed;
-    bottom:0;
-    left:0;
-	padding:5%;
-	text-align: center;
+	padding-top:10%;
+	padding-bottom:5%;
+		text-align: center;
 	clear:both;
 	overflow:hidden;
 	width:100%;
-	height:200px;
-	z-index:-1;
+	height:auto;
+}
+
+.thumbnail
+{
+	width:300px;
+	height:300px;
+	border: none;
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
 	
+}
+
+.col-sm-2
+{
+	text-align:center;
 }
