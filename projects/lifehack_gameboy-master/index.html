@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Acm Hackathon</title>
+		<meta charset="utf-8">
+		
+		<!-- use meta tag to ensure proper rendering and touch zooming width=device-width part sets the width of the page to follow the screen-width of the device. initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="globalStyle.css">
+		
+		<script>
+		function GetRandomLifehack() 
+		{
+			var arrOfLifeHacks = ["Use your cat as a computer duster...maybe not",
+									"Charge your phone on Airplane mode, it charges way faster!",
+									"The arrow on a car's gas gauge tells you what side of the car your tank is on.",
+									"Put your car remote under your chin to help increase its range!",
+									"Utilize dental floss to perfectly cut cakes, cheeses and other soft foods. Just make sure it's the unscented variety!",
+									"Peeling eggs is a breeze if you allow them to cool and then crack them by rolling them.",
+									"Pop a couple of marshmallows on top of your packet of brown sugar to stop it going hard",
+									"Put old newspaper at the bottom of your bin to absorb food juices",
+									"Use a muffin tin to serve condiments at a BBQ",
+									"When ironing a button-up shirt, flip it inside-out to easily iron over the button side",
+									"Before you throw away a post-it, run it between the keys on your keyboard to collect crumbs and fluff",
+									"Rub a walnut on damaged wooden furniture to cover up dings",
+									"Use nail polish to color code different keys",
+									"Put a stocking over the end of a vacuum to find tiny items like earrings",
+									"Turn on your seat warmer to keep pizza hot while driving home",
+									"Hold Oreos with a fork so your fingers don't get messy when dunking them",
+									"Use a bread tab to hold your spot on a roll of tape",
+									"Put a wooden spoon over a pot to avoid it from boiling over",
+									"Popcorn pops better when stored in cold places like the refrigerator",
+									"Behavioral scientists say that we need about 21 days to make/break a habit. If you go 21 days without something you won't need it anymore",
+									"When you go to the zoo wear the same color as the employees do. The animals will come right up to you instead of backing away",
+									"When you are finished with an essay, copy and paste it into Google translate, and listen to it. It's the easiest way to find mistakes."
+								];
+
+			var randomLifeHack = arrOfLifeHacks[Math.floor(Math.random() * arrOfLifeHacks.length)];
+			
+			document.getElementById("lifeHackGoesHere").innerHTML = "\""+randomLifeHack+"\"";
+		}  
+		</script>
+	</head>
+
+	<body>
+		<div class="container" id ="console" style="text-align:center;">
+			<div id ="displayBackground">
+				<p style="color:black; float:left; font-size:70px;">.</p>
+				<div class="container" id ="display">
+					<h3 style="text-align:center;">LifeHack:</h3>
+					
+					<p id="lifeHackGoesHere">(Click Any Button to Generate a Life Hack)</p>
+				</div>
+			</div>
+			
+			<div id="start_select">
+				<div style="margin-left:30%; float:left;"><button id="start_select_buttons" onclick="GetRandomLifehack()">START</button></div>
+				<div style="margin-right:30%; float:right;"><button id="start_select_buttons" onclick="GetRandomLifehack()">SELECT</button></div>	
+			</div>
+			<div id="controls">
+				<div id="dPad" >
+					<button class="dPadButtons" id="dPadButtons_up" onclick="GetRandomLifehack()"><span class="glyphicon glyphicon-menu-up"></span></button>
+					
+					<div id="centerButtons">
+						<button class="dPadButtons" id="dPadButtons_left" onclick="GetRandomLifehack()"><span class="glyphicon glyphicon-menu-left"></span></button>
+						<button class="dPadButtons" id="dPadButtons_center" onclick="GetRandomLifehack()"><span class="glyphicon glyphicon-unchecked"></span></button>
+						<button class="dPadButtons" id="dPadButtons_right" onclick="GetRandomLifehack()"><span class="glyphicon glyphicon-menu-right"></span></button>
+					</div>
+					
+					<button class="dPadButtons" id="dPadButtons_down" onclick="GetRandomLifehack()"><span class="glyphicon glyphicon-menu-down"></span></button>
+				</div>
+				
+				<div id="a_b" >
+					<div style="margin-left:15%; margin-top:50%; width:55px;height:150px; float:left;"><button class="circleButton" onclick="GetRandomLifehack()">B</button></div>
+					<div style="margin-right:15%; margin-top:20%; width:55px;height:150px; float:right;"><button class="circleButton" onclick="GetRandomLifehack()">A</button></div>
+				</div>
+				
+				<div id="grills">
+					<hr>
+					<hr>
+					<hr>
+					<hr>
+					<hr>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+		<title>Game Jam Project</title>
+		
+		<!-- use meta tag to ensure proper rendering and touch zooming width=device-width part sets the width of the page to follow the screen-width of the device. initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script rel="text/javascript" src= "./player.js"></script>	
+		<script rel="text/javascript" src= "./gameWindow.js"></script>	
+		<script rel="text/javascript" src= "./boulder.js"></script>	
+		
+		<!-- goes last -->
+		<script rel="text/javascript" src= "./functions.js"></script>	
+
+
+	</head>
+
+	<body>
+		
+		<div id = "topBar" class = "row" >
+			
+			<!--div class = "col-xs-2">
+			  
+			</div>
+			
+			<div class = "col-xs-2 col-offser">
+				<button class = "gameButtons" id = "play_pause" onclick="game()">play</button>
+			</div-->
+			
+		
+			<div class = "col-xs-2">
+				<button class = "gameButtons" onClick="window.location.reload()">Reset</button>
+			</div>
+		
+
+			
+			<div class = "col-xs-2">
+				<span id = "round">Round:<span id = "roundVal"> 0 </span> </span>	
+							
+			</div>
+			
+			<div class = "col-xs-2">
+				<span id = "score">Score:<span id = "val"> 0 </span> </span>	
+							
+			</div>
+		
+			<!--div class = "col-xs-2">
+				<span id = "health">Health: </span>
+				<image src="assets/res/hearts.jpg"></image>
+			</div-->
+
+		</div>
+		
+		
+		
+		<div id="gameWindow">
+			
+			<div id="backgroundLayer">
+			
+				<div id="parallaxLayer1"></div>
+				
+				<p id = "runText">RUN!!</p>
+				<div id="parallaxLayer2"></div>
+
+			
+			
+			<div id="player"></div>
+			
+			<div id="giantBoulder">boulder</div>
+			
+			
+				<!--div id="allCols">
+					<span class = "cols" id="col0" ></span>
+					<span class = "cols" id="col1" ></span>
+					<span class = "cols" id="col2" ></span>
+					<span class = "cols" id="col3" ></span>
+					<span class = "cols" id="col4" ></span>
+					<span class = "cols" id="col5" ></span>
+					<span class = "cols" id="col6" ></span>
+					<span class = "cols" id="col7" ></span>
+					<span class = "cols" id="col8" ></span>
+					<span class = "cols" id="col9" ></span>
+				</div-->
+			
+			</div>
+		</div>
+
+	<body>
+	
+</html>
+	

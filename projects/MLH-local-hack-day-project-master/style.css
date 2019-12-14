@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+html, body
+{
+	background-color: #211f30;
+	color:white;
+	
+	max-height:100%;
+	max-width:100%;
+	overflow:hidden;
+	
+	font-size:16px;
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+	outline:none;
+	
+	font-family: 'Oswald', sans-serif;
+
+}
+
+
+/*top bar*/
+#top_bar
+{
+	height: 50px;
+	background-color:black;
+}
+
+.game_buttons
+{
+	margin-top:15px;
+	color: white;
+	border:0px;
+
+	text-transform:capitalize;
+	
+	background-color:rgba(0,0,0,0);
+}
+
+#score
+{
+	margin:15px;
+	float: right;
+
+}
+
+#val
+{
+	margin:15px;
+	float: left;
+	color:#f9dc24;
+}
+
+/*gamewindow*/
+#game_window
+{
+	padding:0px;
+	margin:0px;
+	cursor:none;
+	height:calc(100% - 50px);
+
+}
+
+
+/*circles*/
+#dot
+{
+	background-color:#f62a00;
+	width:10px;
+	height:10px;
+	border-radius:30px;
+	position:fixed;
+	z-index:1;
+	
+	top:50%;
+	left:50%;
+}
+
+#seeker
+{
+	background-color:#fff;
+	width:120px;
+	height:120px;
+	border-radius:300px;
+	position:fixed;
+	z-index:0;
+	
+	color:#10d846;
+}
+
+#health 
+{
+	font-size:2em;
+	text-align:center;
+	/*position:relative;
+	*/
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+button:focus
+{
+	outline:none;
+}

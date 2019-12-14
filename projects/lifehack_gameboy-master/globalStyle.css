@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+body,html
+{
+	background-color:#586f81;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+#console
+{
+	border-radius:10px;
+	border-bottom-right-radius:50px;
+	background-color:#e0e2e3;
+	width:450px;
+	height:725px;
+	padding:25px;
+	padding-top:40px;
+	-webkit-box-shadow: 0px 0px 37px 11px rgba(0,0,0,0.39);
+	-moz-box-shadow: 0px 0px 37px 11px rgba(0,0,0,0.39);
+	box-shadow: 0px 0px 37px 11px rgba(0,0,0,0.39);
+}
+
+#displayBackground
+{
+	width:400px;
+	height:300px;
+	padding:25px;
+	background-color:#495b66;
+	border-radius:10px;
+	border-bottom-right-radius:50px;
+}
+
+#display
+{
+	background-color:#55af7e;
+	width:300px;
+	height:250px;
+	color:#446B56;
+	font-family: 'Orbitron', sans-serif;
+	text-align:center;
+}
+
+#start_select
+{
+	width:400px;
+	height:50px;
+}
+
+#controls
+{
+	padding-top:25px;
+	width:400px;
+	height:250px; 
+}
+
+#dPad
+{
+	width:199px;
+	height:200px;
+	float: left;
+	padding:20px;
+	padding-left:25px;
+	padding-top:25px;
+	background-color:#c2c2c2;
+	border-radius:300px;
+}
+
+#a_b
+{
+	width:199px;
+	height:200px;
+	float: right;
+}
+
+/****************dpad button css********************/
+#centerButtons
+{
+	width:150px;
+	margin:none;
+	padding:none;
+}
+	
+.dPadButtons
+{
+	display:inline-block;
+	float:left;
+	color:#B1B09D;
+	background-color:#393e43;
+	border:none;
+	margin:none;
+	width:50px;
+	height:50px;
+	text-decoration:none;
+	outline:none;
+}
+
+#dPadButtons_center
+{
+	border-left:5px solid #8E8D8D;
+	border-right:5px solid #8E8D8D;
+	border-top:5px solid #676767;
+	border-bottom:5px solid #676767;
+	transition: border 0.2s ease;
+}
+
+#dPadButtons_center:active
+{
+	border-left:7px solid #8E8D8D;
+	border-right:7px solid #8E8D8D;
+	border-top:7px solid #676767;
+	border-bottom:7px solid #676767;
+	text-decoration:none;
+	outline:none;
+}
+
+#dPadButtons_up
+{
+	margin-left:50px;
+	margin-right:20px;
+	border-left:5px solid #676767;
+	border-right:5px solid #676767;
+	border-top:5px solid #8E8D8D;
+	border-top-right-radius:2px;
+	border-top-left-radius:2px;
+	transition: border 0.2s ease;
+}
+
+#dPadButtons_up:active
+{
+	border-left:7px solid #676767;
+	border-right:7px solid #676767;
+	border-top:7px solid #8E8D8D;
+}
+
+#dPadButtons_down
+{
+	margin-left:50px;
+	margin-right:20px;
+	border-left:5px solid #676767;
+	border-right:5px solid #676767;
+	border-bottom:5px solid #8E8D8D;
+	border-bottom-right-radius:2px;
+	border-bottom-left-radius:2px;
+	transition: border 0.2s ease;
+}
+
+#dPadButtons_down:active
+{
+	border-left:7px solid #676767;
+	border-right:7px solid #676767;
+	border-bottom:7px solid #8E8D8D;
+}
+
+#dPadButtons_right
+{
+	border-top:5px solid #8E8D8D;
+	border-right:5px solid #676767;
+	border-bottom:5px solid #8E8D8D;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+	transition: border 0.2s ease;
+}
+
+#dPadButtons_right:active
+{
+	border-top:7px solid #8E8D8D;
+	border-right:7px solid #676767;
+	border-bottom:7px solid #8E8D8D;
+}
+
+#dPadButtons_left
+{
+	border-top:5px solid #8E8D8D;
+	border-left:5px solid #676767;
+	border-bottom:5px solid #8E8D8D;
+	border-top-left-radius:2px;
+	border-bottom-left-radius:2px;
+	transition: border 0.2s ease;
+}
+
+#dPadButtons_left:active
+{
+	border-top:7px solid #8E8D8D;
+	border-left:7px solid #676767;
+	border-bottom:7px solid #8E8D8D;
+}
+
+/****************a_b button css********************/
+.circleButton
+{
+	color:white;
+	font-weight:bold;
+	background-color:#bc4374;
+	width:50px;
+	height:50px;
+	border:none;
+	border-right:5px solid rgba(140,46,85,1);
+	border-bottom:5px solid rgba(140,46,85,1);
+	padding:none;
+	border-radius:300px;
+	text-decoration:none;
+	outline:none;
+	transition: all 0.2s ease;	
+}
+
+.circleButton:active, .centerButtons:hover
+{
+	border-right:2px solid rgba(140,46,85,1);
+	border-bottom:2px solid rgba(140,46,85,1);
+}
+
+/****************start_select button css********************/
+
+#start_select_buttons
+{
+	padding:2px;
+	text-decoration:none;
+	outline:none;
+	margin-top:15px;
+	text-align:center;
+	font-size:10px;
+	height:20px;
+	width:60px;
+	background-color:#5F6061;
+	color:#B1B09D;
+	border:none;
+	border-right:5px solid #424242;
+	border-bottom:5px solid  #424242;
+	border-radius:2px;
+	transition: all 0.2s ease;	
+}
+
+#start_select_buttons:active, #start_select_buttonsrButtons:hover
+{
+	border-right:1px solid #424242;
+	border-bottom:1px solid  #424242;
+}
+
+/*grills*************/
+hr
+{
+	background-color:#828282;
+	height:5px;
+	border:none;
+	width:60px;
+	margin:10px;
+}
+#grills {
+	margin-left:360px;
+	margin-top:20px;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

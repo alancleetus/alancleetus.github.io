@@ -1,0 +1,88 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+		<title>Game Jam</title>
+		<!-- use meta tag to ensure proper rendering and touch zooming width=device-width part sets the width of the page to follow the screen-width of the device. initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!--link rel ="stylesheet" type="text/css" href="reset.css"-->
+		<script rel="text/javascript" src= "./main.js"></script>	
+	 
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="pickWindow">
+			<h2 class="sectionTitle">PICK A CARD</h2>
+			<p>Rules: CAT eats RAT; RAT scare ELEPHANT; ELEPHANT crushes CAT;</p>
+			<div onclick ="findWinner(0)" class="card" id="cardOne">
+				<div class="inner">
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<a class="anchorCardOne"></a>
+					<div class="content rat_card"></div>
+					</div>
+					
+				</div>
+		 
+			
+			
+			<div onclick ="findWinner(1)" class="card" id="cardTwo">
+				<div class="inner">
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<a class="anchorCardTwo"></a>
+					<div class="content cat_card"></div>
+					
+				</div>
+			</div>
+			
+			
+			<div onclick ="findWinner(2)" class="card" id="cardThree">
+				<div class="inner">
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<a class="anchorCardThree"></a>
+					<div class="content ele_card"></div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+ 
+			<div class="resultWindow" id ="result"> 
+			 
+			</div>
+		</div>
+	</body>
+</html>

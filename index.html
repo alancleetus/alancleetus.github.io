@@ -1,294 +1,328 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
- 
-	<!-- If IE use the latest rendering engine -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 
-	<!-- Set the page to the width of the device and set the zoom level -->
-	<meta name="viewport" content="width = device-width, initial-scale = 1">
-	<title>Alan Cleetus</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet"  href="mystyle.css">
-	<link href = "logo.png" rel="icon" type="image/png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/collapse.js"></script>
+    <meta charset="utf-8">
+    <title>Alan Cleetus</title>
+    <meta name="description" content="Hi my name is Alan! I am a PROGRAMMER.">
+    <meta name="author" content="Alan Cleetus">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="css/myStyles.css" />
+    <script src="https://kit.fontawesome.com/d25e67ad83.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<!--navbar-->
-<nav class="navbar navbar-inverse navbar-fixed-top" >  
-  <div class="container-fluid">
-  
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>                        
-		</button>
-		<img src="logo.png"id="myLogo"class="pull-left" >
-		<a class="navbar-brand" href="#" >Alan Cleetus</a>
+    <div id="offcanvas-overlay" uk-offcanvas="overlay: true; mode:slide">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <img src="./assets/images/favicon.png" style="width:50%; max-width:300px; margin-left:25%" alt="Alan Cleetus">
+
+            <ul class="uk-text-center" id="navigation-ul" uk-scrollspy-nav="closest: li; scroll: true"
+                onclick="UIkit.offcanvas('#offcanvas-overlay').hide();">
+                <li><a href="#about-section">about</a></li>
+                <li><a href="#education-section">education</a></li>
+                <li><a href="#experience-section">experience</a></li>
+                <li><a href="#projects-section">projects</a></li>
+                <li><a href="#coursework-section">coursework</a></li>
+                <li><a href="#contact-section">contact</a></li>
+            </ul>
+        </div>
     </div>
-	
-	<div class="collapse navbar-collapse" id="myNavbar">
-		<ul class="nav navbar-nav  navbar-right">
-		  <li><a href="#" >home</a></li>
-		  <li><a href="#link_about">about</a></li>
-		  <li><a href="#link_skills">skills</a></li> 
-		  <li><a href="#link_projects">projects</a></li> 
-		  <li><a href="#link_experience">experience</a></li>
-		  <li><a href="#link_accolades">accolades</a></li> 
-		  <li><a href="#link_contact">contact</a></li> 
-		</ul>
-	</div>
-	
-  </div>
-</nav>
 
-<!--Jumbotron-->
-<div class="container-fluid" id="bgImg">
-	<img src="table.jpg" style='width:100%;' border="0" alt="background">
-</div>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container uk-container uk-container-expand uk-navbar-default" uk-navbar>
+            <div class="uk-navbar-left">
+                <img src="./assets/images/favicon.png" style="max-width:50px;" alt="Alan Cleetus">
+            </div>
+            <div class="uk-navbar-right uk-visible@m">
+                <ul class="uk-navbar-nav" uk-scrollspy-nav="closest: li; scroll: true">
+                    <li><a href="#about-section">about</a></li>
+                    <li><a href="#education-section">education</a></li>
+                    <li><a href="#experience-section">experience</a></li>
+                    <li><a href="#projects-section">projects</a></li>
+                    <li><a href="#coursework-section">coursework</a></li>
+                    <li><a href="#contact-section">contact</a></li>
+                </ul>
+            </div>
+            <a class="uk-navbar-toggle uk-navbar-right uk-hidden@m" uk-toggle="target: #offcanvas-overlay"
+                uk-navbar-toggle-icon></a>
+        </nav>
+    </div>
+    <section class="uk-section" id="about-section">
+        <div class="uk-container">
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div id="profile-pic-div">
+                    <img id="profile-pic" data-src="./assets/images/square_profile_pic.jpg" alt="profile pic" uk-img>
+                </div>
+                <div>
+                    <h3 data-uk-scrollspy="{cls:'uk-animation-fade'}">About Me</h3>
+                    <p>
+                        HI! My name is Alan Cleetus.
+                    </p>
+                    <p>I am currently working towards my M.S. in Computer Science from the California State University
+                        Sacramento (CSUS). I recieved my B.S. from CSUS in Fall of 2017.</p>
+                    <p>My main area of interests are:</p>
+                    <p>
+                        <ul>
+                            <li>Web Design and Development(Full Stack)</li>
+                            <li>Android Application Design and Development</li>
+                            <li>Cyber Security</li>
+                            <li>IOT</li>
+                            <li>and many others ...</li>
+                        </ul>
+                    </p>
 
-<div class="container text-right" id= "textOnPic">
-    <h1><mark>DESIGNER</mark></h1> 
-	<h1 ><mark>DEVELOPER</mark></h1> 
-</div>
+                    <p>
+                        In my free time I enjoy hiking, watching foreign movies/tv shows, and reading Asian light novels.
+                    </p>
 
-<div class= "container-fluid" id="main" bgcolor = "#ffffff";>
-	<!--about me-->
-	<a name="link_about"></a>
-	<div class="container" id="divider" >
-		ABOUT ME
-	</div>
-	<div class="container" id="about">
-		<h1>Hi! My name is Alan</h1>
-		
-		<p>
-		
-		I am a junior at CSU Sacramento, working towards a BS in Computer Science.<br><br>
-		
-		I am an aspiring software engineer who primarily focus on writing usable, efficient, and maintainable code. I also take interest in developing user friendly and well-designed websites.<br><br>
+                </div>
+            </div>
 
-		In my free time I like to travel as a way of meeting new and interesting people from different  cultural settings.  I also have a passion for photography and digital design.  
+        </div>
+    </section>
 
-	</p>
-	</div>
+    <section class="uk-section" id="education-section">
+        <div class="uk-container">
+            <h2 class="section-header uk-text-center"><span><i class="fas fa-graduation-cap"></i>
+                    Education</span></h2>
 
-	<!--Skills-->
-	<a name="link_skills"></a>
-	<div class="container" id="divider">
-		MY SKILLS
-	</div>
-	<div class="container" id="skills">
-		<h3 align="center" id="section">Programming</h3>
-		<div class="row">
-			<div class="col-sm-1">
 
-			</div>
-			<div class="col-sm-2">
-				<img src="./Logos/java.png" class="thumbnail"/>
-				<h3>JAVA</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/cpp.png" class="thumbnail"/><!--has space after cpp why lol-->
-				<h3>C++</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/c.png" class="thumbnail"/>
-				<h3>C</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/sql.png" class="thumbnail"/>
-				<h3>SQL</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/html5.png" class="thumbnail"/>
-				<h3>HTML5</h3>
-			</div>
-			
-		</div>
-		
-		<br />
-		<br />
-		
-		<div class="row">
-			<div class="col-sm-1">
-		
-			</div>
-		
-			<div class="col-sm-2">
-				<img src="./Logos/css3.png" class="thumbnail"/>
-				<h3>CSS3</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/bootstrap.png" class="thumbnail"/>
-				<h3>Bootstrap</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/javascript.png" class="thumbnail"/>
-				<h3>Javascript</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/php.png" class="thumbnail"/>
-				<h3>PHP</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/jquery.png" class="thumbnail"/>
-				<h3>jQuery</h3>
-			</div>
-		
-		</div>
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div class="uk-visible@m uk-width-1-4"> </div>
+                <div class="uk-width-1-4@s uk-text-center">
+                    <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
+                        style="max-width:150px; height:auto; " uk-img>
+                </div>
+                <div class="uk-text-left@s uk-text-center">
+                    <h4><i>M.S. Computer Science</i></h4>
+                    <p><i>Fall 2018 - Present</i><br />California State University Sacramento<br />Graduation Date: Fall
+                        2020<br />Current GPA: 3.94</p>
+                </div>
+            </div>
 
-		<h3 align="center"id="section">Graphic Design Tools</h3>
-		<div class="row">
 
-			<div class="col-sm-2">
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div class="uk-visible@m uk-width-1-4"> </div>
+                <div class="uk-width-1-4@s uk-text-center">
+                    <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
+                        style="max-width:150px; height:auto; " uk-img>
+                </div>
+                <div class="uk-text-left@s uk-text-center">
+                    <h4><i>B.S. Computer Science</i></h4>
+                    <p><i>Fall 2017</i><br />California State University Sacramento<br />GPA: 3.42</p>
+                </div>
+            </div>
 
-			</div>
-			<div class="col-sm-2">
-				<img src="./Logos/photoshop.png" class="thumbnail"/>
-				<h3>Photoshop</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="Logos/illustrator.png" class="thumbnail"/>
-				<h3>Illustrator</h3>
-			</div>
-			
-			<div class="col-sm-2">
-				<img src="./Logos/gimp.png" class="thumbnail"/>
-				<h3>Gimp</h3>
-			</div>
 
-			<div class="col-sm-2">
-				<img src="./Logos/inkscape.png" class="thumbnail"/>
-				<h3>Inkscape</h3>
-			</div>
-		</div>
-	</div>
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div class="uk-visible@m uk-width-1-4"> </div>
+                <div class="uk-width-1-4@s uk-text-center">
+                    <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
+                        style="max-width:150px; height:auto; " uk-img>
+                </div>
+                <div class="uk-text-left@s uk-text-center">
+                    <h4><i>Certificate in Information Assurance and Countermeasures</i></h4>
+                    <p><i>Fall 2017</i><br />California State University Sacramento</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!--Projects-->
-	<a name="link_projects"></a>
-	<div class="container" id="divider">
-		SOME OF MY WORK
-	</div>
-	<div class="container" id="projects">
-	<div class="row">
-		<div class="col-md-2">
+    <section class="uk-section" id="experience-section">
+        <div class="uk-container">
+            <h2 class="section-header uk-text-center" style="color:white"><span><i class="fas fa-laptop-code"></i>
+                    Experience</span></h2>
 
-		</div>
-		<div class="col-md-2">
-			<h3>Computer Software Engineering Coursework</h3>
-			<a href="athena.ecs.csus.edu/~mepsys">project link</a>
-			<p><br/>Worked as the lead web designer in a group of five in creating a website that helped to keep track of members and events of the MESA Engineering Program at CSU Sacramento. I utilized HTML5, CSS3, Bootstrap, and JavaScript to make a responsive, attractive and efficient front-end for the website. I also incorporated jQuery and AJAX to the website for updating data on our webpages without having to reload them.</p>
-			
-		</div>
-		
-		<div class="col-md-2">
-			<h3>Attendance Tracking Web Application</h3>
-			<p><br/>Developed a web application to track the students attending events hosted by Association of Computing Machinery chapter at CSUS (ACM) utilizing HTML5, CSS3, Bootstrap, and JavaScript. This application also works with the Sac State student ID card, so ACM officers can sign attendees into events using a magnetic card reader.</p>
-			
-		</div>
-		
-		<div class="col-md-2">
-			<h3>Programming Concepts and Methodologies II Coursework</h3>
-			<a href="https://github.com/alancleetus/Big-Num-Calculator">Source at GitHub</a>
-			<p><br/>Developed a Java application that converts equations that are in infix notation to postfix notation, and performs mathematical operations on the postfix result. The program also allowed the use of numbers that are of datatype BigInteger, and it also came with a well-designed, and user-friendly GUI implemented using Java Swing and Java’s Abstract Window Toolkit (AWT).</p>
-			
-		</div>
-		
-		<div class="col-md-2">
-			<h3>SHPE @ Sac State Login portal</h3>
-			<a href="http://athena.ecs.csus.edu/~shpe/shpeNewDb/portal/html/">portal link</a>
-			<p><br/>Worked as the front end developer in creating a member login portal for SHPE club at CSU Sacramento. I utilized HTML5, CSS3, Bootstrap, and JavaScript along with jQuery and AJAX to make the front-end for the portal.</p>
-		</div>
-	</div>
-	</div>
-	
-	<!--Projects-->
-	<a name="link_experience"></a>
-	<div class="container" id="divider">
-		EXPERIENCE
-	</div>
-	<div class="container" id="experience">
-	
-	<h3>Webmaster</h3>
-	<h5>Association of Computing Machinery chapter at CSUS</h5>
-	<h5>Fall 2016</h5>
-	<p><br/>My responsibilities as the ACM Webmaster include, but not limited to managing the ACM website hosted on cPanel, as well as managing all social media accounts related to ACM, recording or livestreaming important meeting, events, and tech talks that ACM organizes, and creating new programs, or web applications needed for ACM. I utilize HTML5, CSS3, PHP, JavaScript, and OBS to perform my abilities in a timely and thorough manner.</p>
+            <div class="uk-child-width-1-2@m"  
+                uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false" uk-grid uk-height-match="target: > div > .uk-card > .uk-card-body; "  >
 
-	<h3>Volunteer</h3>
-	<h5>CSUS International Collegiate Programming Contest</h5>
-	<h5>Spring 2016</h5>
-	
-	<h3>Volunteer</h3>
-	<h5>CSUS Engineering Expo</h5>
-	<h5>Spring 2016</h5>
-	
-	<h3>Volunteer</h3>
-	<h5>Asparagus Festival Stockton</h5>
-	<h5>Spring 2013</h5>
-			
-	
-	</div>
+                <div>
+                    <div class="uk-card uk-card-default uk-margin" >
+                        <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-expand">
+                                    <h3 class="uk-card-title uk-margin-remove-bottom">Student Assistant</h3>
+                                    <a href="https://www.csus.edu/public-affairs-advocacy/"
+                                        class="uk-button uk-button-text" style="text-align:left"><span><i
+                                                class="fas fa-map-marker-alt"></i></span> CSU
+                                        Sacramento Public Affairs and Advocacy Department</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card-body">
+                            <ul class="fa-ul" style="list-style-type:none">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Designed and created original
+                                    web page while following accessibility standards and
+                                    existing design principles that were in place</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Migrated and updated outdated
+                                    web pages to the new Content Management System(CMS)
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Modified and modernized
+                                    online materials</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utilized HTML, CSS, JS,
+                                    jQuery, and Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="uk-card-footer">
+                            <p class="uk-text-meta uk-margin-remove-top"><span><i
+                                        class="fas fa-calendar-alt"></i></span> June 2017 - August 2017</p>
+                        </div>
+                    </div>
+                </div>
 
-	<!--Accolades-->
-	<a name="link_accolades"></a>
-	<div class="container" id="divider">
-		ACCOLADES
-	</div>
-	<div class="container" id="accolades">
-	<div class="row">
-		<div class="col-sm-2">
+                <div>
+                    <div class="uk-card uk-card-default uk-margin">
+                        <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-expand">
+                                    <h3 class="uk-card-title uk-margin-remove-bottom">Webmaster</h3>
+                                    <a href="http://csus.acm.org" class="uk-button uk-button-text" style="text-align:left"><span><i
+                                                class="fas fa-map-marker-alt"></i></span> CSU
+                                        Sacramento Association of Computing Machinery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card-body">
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Facilitated general meetings
+                                    for Computer Science students at CSU Sacramento and
+                                    supervised shadow member</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Organized and managed club
+                                    events</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Further developed club
+                                    website by utilizing HTML, CSS, JS, jQuery, Bootstrap, MySql,
+                                    and
+                                    AJAX</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Acted as liaison to other
+                                    club leadership and faculty to ensure maximum club
+                                    operations
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uk-card-footer">
+                            <p class="uk-text-meta uk-margin-remove-top"><span><i
+                                        class="fas fa-calendar-alt"></i></span> August 2016 - December 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</div>
-		<div class="col-sm-2">
-			<h3>ICPC Fall 2015</h3>
-			<p>Lower Division <mark>Champion (First Place)</mark> at the International Collegiate Programming Contest(ICPC) held at CSU Sacramento.</p>
-		</div>
-		
-		<div class="col-sm-2">
-			<h3>Academic Honors and Awards</h3>
-			<p>I also have been consistently named to the Honor Roll/Principal's list/Dean's list throughout  my educational career.  Most recently I was on the <mark>Dean's Honor Roll</mark> for Fall 2015 At CSU Sacramento.</p>
-		</div>
-		
-		<div class="col-sm-2">
-			<h3>Merced County Fair Logo Design Contest (2010)</h3>
-			<p>Placed <mark>Second</mark> at the Merced County Fair Logo Design Contest(2010) in which I went up against many other professional graphic designers in hopes of designing a logo for the County fair.</p>
-			<a href="http://www.examiner.com/article/merced-county-fair-has-new-logo">An article about the competition.</a>
-		</div>
-		
-		<div class="col-sm-2">
-			<h3>East Union High School Art Show</h3>
-			<p>I entered two pieces of artwork in the East Union High School Art Show(2010-2011) in the "Introduction to Digital Photography-Experimental" category for which I won both<mark>First Place</mark> and <mark>Fourth Place</mark></p>
-		</div>
-	</div>
-	</div>
+        </div>
+    </section>
 
-	<!--contact info-->
-	<a name="link_contact"></a>
-	<div class="footer navbar-inverse navbar-static-bottom " id="foot">
-	<a class="contact" href = "https://www.linkedin.com/in/alan-cleetus-792034ba"><img src="Logos/linkedin.png"id="contactlogo">LinkedIn</img></a>
-	
-	<a class="contact" href = "https://github.com/alancleetus"><img src="Logos/github.png"id="contactlogo">GitHub</img></a>
-	
-	<p id= "copyright" ><br/>Copyright © Alan Cleetus 2016</p>
-	
-</div>
-</div>
+    <section class="uk-section" id="projects-section">
+        <div class="uk-container">
+            <h2 class="section-header uk-text-center"><span><i class="fas fa-folder-open"></i>
+                    Projects</span></h2>
+
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class=" uk-background-cover uk-light uk-flex uk-flex-top "
+                    uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true"
+                    style="background-image: url('./assets/images/senior-project/cslHomePage.jpg'); background-position: top;">
+
+                    <canvas width="600" height="400"></canvas>
+                </div>
+                <div uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                    <div class="uk-card-body">
+                        <h4 class="uk-card-title"><span><i class="fas fa-landmark"></i> California State Library Website
+                                Remodeling</h4>
+                        <hr style="width:25%" />
+                        <p>Remodeled and developed original, dynamic web pages as part of a six person Senior Project
+                            team for the California State Library. Exercised Scrum software development methodology to
+                            streamline our work. Utilized technologies such as ASP.NET MVC 5, HTML5, CSS3, Bootstrap,
+                            JavaScript, PHP, MySQL, jQuery, and AJAX to create and overhaul more than 200 web pages.
+                        </p>
+                        <a href="https://www.library.ca.gov/"><span><i class="fas fa-external-link-alt"></i> Project
+                                Website</span></a>
+
+                        <hr />
+                        <h4><span><i class="fas fa-newspaper"></i> Related Articles</span></h4>
+                        <a href="https://www.techwire.net/news/library.html"><span><i
+                                    class="fas fa-external-link-alt"></i> Tech Wire</a>
+                        <br />
+                        <a
+                            href="https://www.govtech.com/computing/California-State-Library-Eases-Access-Through-Smarter-Portal.html"><span><i
+                                    class="fas fa-external-link-alt"></i> Government Technology</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+
+                <div>
+                    <div class="uk-card-body " uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                        <h4 class="uk-card-title"><span><i class="fas fa-calendar-alt"></i> Attendance Tracking Web
+                                Application</span></h4>
+                        <hr style="width:25%" />
+                        <p>Developed a database and related web pages used to track the amount and types of students
+                            attending events hosted by the Association of Computing Machinery chapter at CSUS (ACM).
+                            This application works with the CSU Sacramento student ID card, enabling ACM officers to
+                            sign attendees into events using a magnetic card reader. Application was built using HTML5,
+                            CSS3, Bootstrap, JavaScript, PHP, MySQL, jQuery, and AJAX.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-card-media-right uk-cover-container uk-background-cover uk-light uk-flex uk-flex-top"
+                    uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true"
+                    style="background-image: url('./assets/images/acm/acmHomePage.jpg');background-position: top;">
+                    <canvas width="600" height="400"></canvas>
+                </div>
+            </div>
+
+            <!--under construction-->
+            <!--div class="uk-text-center ">
+                <a class="uk-button uk-button-default uk-button-primary"
+                    uk-scrollspy="cls: uk-animation-shake; repeat: true" href="./projects.html">More Projects</a>
+            </div-->
+        </div>
+    </section>
+
+
+    <section class="uk-section" id="coursework-section">
+        <div class="uk-container">
+            <h2 class="section-header uk-text-center"><span><i class="fas fa-book"></i>
+                    Related Coursework</span></h2>
+                    <ul style="list-style: none;">
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20201">Programming Language Principles</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20204">Data Models for Database Management Systems</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20205">Computer System Structure</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20206">Algorithms and Paradigms</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20232">Software Requirements Analysis and Design</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20275">Advanced Data Communication Systems</a></li>
+                        <li><a href="https://catalog.csus.edu/search/?P=CSC%20239">Advanced Operating System Principles</a></li> 
+                    </ul>
+        </div>
+    </section>
+
+    <section class="uk-section" id="contact-section">
+        <div class="uk-container"> 
+            <h2 class="section-header uk-text-center">
+                Contact</h2>
+               <div style="text-align: center;" uk-grid>
+                <div class="ul-width-1-2@m">
+                    <p><span><i class="fab fa-linkedin"></i></span> <a href = "https://www.linkedin.com/in/alan-cleetus-792034ba">LinkedIn</a>
+                </div>
+                <div class="ul-width-1-2@m">
+                    <p><span><i class="fab fa-github"></i></span> <a href = "https://github.com/alancleetus">GitHub</a></p>
+                                    
+                </div>
+                
+            </div>
+
+                <p  style="text-align: center;" id= "copyright" ><br/>Copyright © Alan Cleetus 2020</p>
+
+        </div>
+    </section>
 
 </body>
+
 </html>
