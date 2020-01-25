@@ -103,3 +103,11 @@ body{
 #experience-section .uk-card-default .uk-card-footer{
     border-top:none;
 }
+
+#footer-links
+{
+    text-align: center; 
+    display:flex; 
+    align-items: center; 
+    justify-content: center;
+}
