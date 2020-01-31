@@ -106,8 +106,14 @@ body{
 
 #footer-links
 {
-    text-align: center; 
+     
     display:flex; 
-    align-items: center; 
-    justify-content: center;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+}
+
+#footer-links>p
+{
+    margin-top:0;
+    margin-bottom:0;
 }
