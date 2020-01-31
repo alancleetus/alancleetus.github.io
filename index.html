@@ -29,12 +29,14 @@
 </head>
 
 <body>
-    <div id="offcanvas-overlay" uk-offcanvas="overlay: true; mode:slide">
+    <!--NAVIGATION CODE-->
+    
+    <div id="offcanvas-overlay" uk-offcanvas="flip: true; overlay: true; mode:reveal">
         <div class="uk-offcanvas-bar">
 
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-            <img src="./assets/images/favicon.png" style="width:50%; max-width:300px; margin-left:25%" alt="Alan Cleetus">
+            <!--img src="./assets/images/favicon.png" style="width:50%; max-width:300px; margin-left:25%" alt="Alan Cleetus"-->
 
             <ul class="uk-text-center" id="navigation-ul" uk-scrollspy-nav="closest: li; scroll: true"
                 onclick="UIkit.offcanvas('#offcanvas-overlay').hide();">
@@ -45,13 +47,15 @@
                 <li><a href="#coursework-section">coursework</a></li>
                 <li><a href="#contact-section">contact</a></li>
             </ul>
+
         </div>
     </div>
 
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-        <nav class="uk-navbar-container uk-container uk-container-expand uk-navbar-default" uk-navbar>
+        <nav class="uk-navbar-container uk-dark" uk-navbar>
+           
             <div class="uk-navbar-left">
-                <img src="./assets/images/favicon.png" style="max-width:50px;" alt="Alan Cleetus">
+                <img src="./assets/images/favicon.png" style="max-width:50px;" alt="Alan Cleetus"> 
             </div>
             <div class="uk-navbar-right uk-visible@m">
                 <ul class="uk-navbar-nav" uk-scrollspy-nav="closest: li; scroll: true">
@@ -65,16 +69,27 @@
             </div>
             <a class="uk-navbar-toggle uk-navbar-right uk-hidden@m" uk-toggle="target: #offcanvas-overlay"
                 uk-navbar-toggle-icon></a>
+
         </nav>
     </div>
+
+    <!--PAGE CONTENT START-->
+    <!--section>
+        <h1>Alan Cleetus<span class="blinking-cursor">I</span></h1>
+    </section-->
+
     <section class="uk-section" id="about-section">
         <div class="uk-container">
             <div class="uk-child-width-expand@s" uk-grid>
                 <div id="profile-pic-div">
-                    <img id="profile-pic" data-src="./assets/images/square_profile_pic.jpg" alt="profile pic" uk-img>
+                    <div id="profile-pic-outer">
+                    <h2 class="section-header uk-text-center"><span><img style="max-width:35px;" src="./assets/icons/user.svg" class="my-icons"></img> 
+                        About Me</span></h2>
+                        <hr style="margin-left: 40%;margin-right: 40%;">
+                    <img id="profile-pic-img" data-src="./assets/images/square_profile_pic.jpg" alt="profile pic" uk-img>
                 </div>
-                <div>
-                    <h3 data-uk-scrollspy="{cls:'uk-animation-fade'}">About Me</h3>
+            </div>
+                <div class="section-content"> 
                     <p>
                         HI! My name is Alan Cleetus.
                     </p>
@@ -92,7 +107,7 @@
                     </p>
 
                     <p>
-                        In my free time I enjoy hiking, watching foreign movies/tv shows, and reading Asian light novels.
+                        In my free time I enjoy hiking, watching foreign movies, and reading.
                     </p>
 
                 </div>
@@ -103,11 +118,11 @@
 
     <section class="uk-section" id="education-section">
         <div class="uk-container">
-            <h2 class="section-header uk-text-center"><span><i class="fas fa-graduation-cap"></i>
+            <h2 class="section-header uk-text-center"><span><img src="./assets/icons/education.svg" class="my-icons"></img>
                     Education</span></h2>
+                    <hr style="margin-left: 40%;margin-right: 40%;">
 
-
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s section-content" style="margin-left: 0px;" uk-grid>
                 <div class="uk-visible@m uk-width-1-4"> </div>
                 <div class="uk-width-1-4@s uk-text-center">
                     <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
@@ -121,7 +136,7 @@
             </div>
 
 
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s section-content" style="margin-left: 0px;" uk-grid>
                 <div class="uk-visible@m uk-width-1-4"> </div>
                 <div class="uk-width-1-4@s uk-text-center">
                     <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
@@ -134,7 +149,7 @@
             </div>
 
 
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s section-content" style="margin-left: 0px;" uk-grid>
                 <div class="uk-visible@m uk-width-1-4"> </div>
                 <div class="uk-width-1-4@s uk-text-center">
                     <img data-src="assets/images/sacStateLogo.png" alt="Sacramento State University"
@@ -150,9 +165,9 @@
 
     <section class="uk-section" id="experience-section">
         <div class="uk-container">
-            <h2 class="section-header uk-text-center" style="color:white"><span><i class="fas fa-laptop-code"></i>
+            <h2 class="section-header uk-text-center" ><span><img src="./assets/icons/work.svg" class="my-icons"></img>
                     Experience</span></h2>
-
+                    <hr style="margin-left: 40%;margin-right: 40%;">
             <div class="uk-child-width-1-2@m"  
                 uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false" uk-grid uk-height-match="target: > div > .uk-card > .uk-card-body; "  >
 
@@ -232,9 +247,9 @@
 
     <section class="uk-section" id="projects-section">
         <div class="uk-container">
-            <h2 class="section-header uk-text-center"><span><i class="fas fa-folder-open"></i>
+            <h2 class="section-header uk-text-center"><span><img src="./assets/icons/projects.svg" class="my-icons"></img>
                     Projects</span></h2>
-
+                    <hr style="margin-left: 40%;margin-right: 40%;">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                 <div class=" uk-background-cover uk-light uk-flex uk-flex-top "
                     uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true"
@@ -300,10 +315,12 @@
 
     <section class="uk-section" id="coursework-section">
         <div class="uk-container">
-            <h2 class="section-header uk-text-center"><span><i class="fas fa-book"></i>
-                    Related Coursework</span></h2>
-                    <div class="uk-child-width-1-2@s  " uk-grid> 
-                    <div>
+            <h2 class="section-header uk-text-center"><span><img src="./assets/icons/book.svg" class="my-icons"></img>
+                    Related Coursework</span></h2> 
+                    <hr style="margin-left: 40%;margin-right: 40%;">
+
+                    <div class="uk-child-width-1-2@s section-content " style="margin-left: 0px;" uk-grid> 
+                    <div >
                     <h4>Graduate Level Courses</h4>
                     <ul style="list-style: none;">
                         <li><a href="https://catalog.csus.edu/search/?P=CSC%20201">Programming Language Principles</a></li>
@@ -315,7 +332,7 @@
                         <li><a href="https://catalog.csus.edu/search/?P=CSC%20239">Advanced Operating System Principles</a></li>
                         <li><a href="https://catalog.csus.edu/search/?P=CSC%20250">Computer Security*</a></li>
                         <li><a href="https://catalog.csus.edu/search/?P=CSC%20258"> Distributed Systems*</a></li> 
-                    </ul>
+                    </ul> 
                 </div>
                 <div>
                     <h4>Undergraduate Level Courses</h4>
@@ -341,7 +358,8 @@
 
     <section class="uk-section" id="contact-section">
         <div class="uk-container"> 
-            <h2 class="section-header uk-text-center">Contact</h2>
+            <h2 class="section-header uk-text-center"><span><img style="max-width:35px" src="./assets/icons/contact.svg" class="my-icons"></img> Contact</span></h2>
+            <hr style="margin-left: 40%;margin-right: 40%;">
             <div id="footer-links">
                 <p><span><i class="fab fa-linkedin"></i></span> <a href = "https://www.linkedin.com/in/alan-cleetus-792034ba">LinkedIn</a></p>
         

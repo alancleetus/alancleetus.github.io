@@ -1,8 +1,48 @@
+@font-face {
+    font-family: 'archiaregular';
+    src: url('../assets/fonts/archia-regular-webfont.eot');
+    src: url('../assets/fonts/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/archia-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/archia-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/archia-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hkgroteskregular';
+    src: url('../assets/fonts/HKGrotesk-Regular.ttf');
+    src:url('../assets/fonts/HKGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hkgrotesklight';
+    src: url('../assets/fonts/HKGrotesk-Regular.ttf');
+    src:url('../assets/fonts/HKGrotesk-Regular.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: light;
+}
+
 body{
-    background-color:#f4f6f8;
+
+    background-color:#ffffff;
+    background: linear-gradient(75deg, rgba(243,243,243,1) 0%, rgba(255,255,255,1) 50%);
+
+ 
+
+    font-family: archiaregular;
+}
+
+/*all icons from noun project*/
+.my-icons{
+    max-width: 50px;
 }
 
 .uk-section{
+    maring-top:50px;
     padding-top:50px;
     padding-bottom:50px;
 }
@@ -18,6 +58,63 @@ body{
     letter-spacing:.15em;
     text-transform:uppercase;
 }
+ 
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: #2E3D48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+
 
 #profile-pic-div
 {
@@ -28,49 +125,38 @@ body{
 }
 
 
-#profile-pic
+#profile-pic-outer
+{}
+
+#profile-pic-img
 {
-    border-radius: 50%;
-    border:5px solid white;
     max-width:300px;
-    height:auto; 
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,.08)
-}
-
-
-#about-section{
-    background-color:#e9eef3;
-}
-
-#education-section{ 
-    background-color:#ffffff;
-}
-
-#experience-section{
-    background-color:#343a40;
-}
-
-
-#projects-section{
-    background-color:#e9eef3;
-}
-
-#coursework-section{
-    background-color:#ffffff;
-}
-
-#contact-section{
-    background-color:#2c363c;
-}
-#contact-section *{
-    color:white;
+    height:auto;  
+    
 }
 
 .section-header
 {
-    text-align:center; 
-    padding-bottom:50px;
-    font-family: freight-display-pro;
+    text-align:left;  
+    font-family: hkgroteskregular;
+    font-weight: bold;
+}
+
+
+.section-content
+{
+    padding:2em 2.5em 1em;
+    margin-top:3em;
+    border:1px solid #DFE1E6;
+    border-radius: 4px;
+    background:#fff;
+
+}
+
+h1,h2,h3,h4
+{
+    font-family: hkgroteskregular;
+
 }
  
 .image-box-shadow{
@@ -88,7 +174,7 @@ body{
 }
 
 .uk-navbar-nav > li > a{
-    border-bottom:2px solid white;
+    border-bottom:2px solid #ffffff00;
     transition: all ease-in .5s;
     
 }
